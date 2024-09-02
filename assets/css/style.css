@@ -35,7 +35,6 @@
   align-items: center;
   gap: 10px;
 }
-
 .menu .list ul li a {
   font-family: var(--mainFont);
   color: #101928;
@@ -500,7 +499,7 @@
   padding-left: 20px;
 }
 .profile p {
-  width: 500px;
+  width: 50%;
   color: #646464;
   font-size: 16px;
   font-family: var(--mainFont);
@@ -587,4 +586,75 @@
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
+}
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .professional, .explain, .begins, .footer {
+    text-align: center;
+  }
+
+  .professional, .footer .logo, .footer .list1 {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .begins {
+    flex-direction: column-reverse;
+  }
+
+  .begins .girl img, .professional img {
+    max-width: 300px;
+  }
+
+  .explain .title {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .logo, .footer .list1 {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 5px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .list ul {
+    flex-direction: column;
+  }
+
+  .auth {
+    flex-direction: column;
+  }
+
+  .explain, .professional {
+    padding: 10px;
+  }
 }
